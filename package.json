@@ -46,5 +46,13 @@
   "description": "demo app for COMP229",
   "main": "index.js",
   "author": "Bohyun",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bosohyun/bohyun_assignment2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bosohyun/bohyun_assignment2/issues"
+  },
+  "homepage": "https://github.com/Bosohyun/bohyun_assignment2#readme"
 }
