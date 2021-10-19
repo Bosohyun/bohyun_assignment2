@@ -1,0 +1,57 @@
+<!-- index.ejs, BOHYUN KIM, 301131832, 21.09.28 -->
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+
+<!--Content for the Add page
+-->
+
+
+<div class="container">
+    
+    <div class="row">
+        <div class="offset-md-4 col-md-4">
+            <div class="title text-center my-5">
+                <h1><%= title %></h1>
+             </div>
+            
+
+            <form class="form" method="POST">
+                <div class="form-group my-3">
+                    <label for="contactName" class="h5">Name</label>
+                    <input type="text" class="form-control"
+                    id="contactName"
+                    placeholder="Enter the name"
+                    name ="name" required>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="contactPhone" class="h5">Phone</label>
+                    <input type="text" class="form-control"
+                    id="contactPhone"
+                    placeholder="Enter the phone number"
+                    name ="phone" required>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="contactEmail" class="h5">Email</label>
+                    <input type="text" class="form-control"
+                    id="contactEmail"
+                    placeholder="Enter the Email address"
+                    name = "email" required>
+                </div>
+
+                <fieldset class="form-group text-center my-5">
+                    <button class="btn btn-primary mx-3" type="submit">
+                        <i class="fas fa-edit"></i>Submit</button>
+                        <a href="/contact-list" class="btn btn-secondary mx-3">
+                            <i class="fas fa-undo"></i> Cancel</a>
+                </fieldset>            
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+
+<%- include ../partials/footer.ejs %>

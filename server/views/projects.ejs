@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- CSS section -->
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel='stylesheet' href='/Content/projects.css'>
+</head>
+<body>
+
+<%- include partials/main_nav.ejs %>
+
+<!-- Contents -->
+<section id="projects">
+    <h1>Projects</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card mb-5 text-center" style="width: 18rem;">
+                    <img src="/Assets/images/project1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Bug Smasher</h5>
+                      <p class="card-text">A simple game made by using simple java script code.</p>
+                      <a href="http://studentweb.cencol.ca/bkim72/assignment/assignment5.html" target="_blank" class="btn btn-dark" id="project1" >More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-5 text-center" style="width: 18rem;">
+                    <img src="Assets/images/project2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Photo Gallery</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="http://studentweb.cencol.ca/bkim72/assignment/assignment6.html" target="_blank" class="btn btn-dark project2" id="project2">More</a>
+                    </div>
+                </div>
+    
+                
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-5 text-center" style="width: 18rem;">
+                    <img src="Assets/images/project3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Stock Management</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="/Assets/download/FinalTest.zip" class="btn btn-dark" id="project3">More</a>
+                    </div>
+                </div>
+    
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>

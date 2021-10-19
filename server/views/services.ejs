@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- CSS section -->
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel='stylesheet' href='/Content/services.css'>
+</head>
+<body>
+<%- include partials/main_nav.ejs %>
+<section class="services">
+    <div class="container">
+        <h1>Services</h1>
+        <div class="card">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/Assets/images/skill1.png" class="img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="card-title mt-2">C#</h2>
+                    <p>
+                        Developing Window application with C#.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/Assets/images/skill2.png">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="card-title mt-2">HTML,CSS&JS</h2>
+                    <p>
+                        Developing a responsive homepage with HTML,CSS and JS
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/Assets/images/skill3.png">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="card-title mt-2">Python</h2>
+                    <p>
+                        Data analysis with Python
+                    </p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="card">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/Assets/images/skill4.png">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="card-title mt-2">Java</h2>
+                    <p>
+                        Developing Android appliction with Java
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</section>
+
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>

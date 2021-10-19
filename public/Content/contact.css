@@ -1,0 +1,59 @@
+/*Custom css goes here */
+/* contact.css, BOHYUN KIM, 301131832, 21.09.28 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    position: relative;
+    width:100%;
+}
+
+#header .navbar{
+    padding:0;
+}
+#header .navbar-brand {
+
+   
+    font-weight:bold;
+    font-size: 2em;
+    text-transform:uppercase;
+    color:rgb(0, 38, 109);
+}
+
+#header .nav-item{
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 15px;
+}
+
+#header .nav-link{
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+#header .navbar-text{
+    padding-left: 30px;
+    font-size: 0.8em;
+}
+
+
+.logo{
+    opacity: 0.5;
+}
+
+body{
+    position:relative;
+    background:url(/Assets/images/background.jpg);
+    background-size:cover;
+}
+
+
+.contactform{
+  
+    max-width: 800px;
+    margin: 30px;
+    padding: 30px;
+}

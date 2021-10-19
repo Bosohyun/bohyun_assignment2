@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- CSS section -->
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel='stylesheet' href='../Content/contact.css'>
+</head>
+<body>
+
+<%- include ../partials/main_nav.ejs %>
+
+
+<section class="contactform mx-auto mb-10">
+  <div class="title text-center mb-5">
+    <h1>Business Contact List</h1>
+ </div>
+    
+    <% if(typeof displayName == 'string' && displayName) { %>
+      <a href="/contact-list/add" class="btn btn-primary" role="button">
+      <i class = "fas fa-plus-circle"></i> Add a Contact</a>
+    <% } %>
+    <br>
+    <table class="table table-striped table-hover mt-3">
+        <!-- Header Row-->
+        <thead class="table-dark">
+          <tr class="d-flex">
+            <% if(typeof displayName == 'string' && displayName) { %>
+              <th class="text-center col-3">Name</th>
+              <th class="text-center col-3">Phone</th>
+              <th class="text-center col-4">Email</th>
+              <th class="text-center col-1"></th>
+              <th class="text-center col-1"></th>
+            <% } else { %>
+              <th class="text-center col-4">Name</th>
+              <th class="text-center col-4">Phone</th>
+              <th class="text-center col-4">Email</th>
+            <% } %>
+          </tr>
+      </thead>
+
+        <!-- Repeatable Template Row -->
+      <tbody>
+        <% for(let count = 0; count < ContactList.length; count++) { %>
+            <tr class="d-flex">
+                <% if(typeof displayName == 'string' && displayName) { %>
+                  <td class="text-center col-3"><%= ContactList[count].name %></td>
+                  <td class="text-center col-3"><%= ContactList[count].phone %></td>
+                  <td class="text-center col-4"><%= ContactList[count].email %></td>
+                
+                  <td class="text-center col-1">
+                    <a href="/contact-list/edit/<%= ContactList[count]._id%>" class="btn btn-primary btn-sm">
+                    <i class="fas fa-pencil-alt"></i></a>
+                  </td>
+                  <td class="text-center col-1">
+                    <a href="/contact-list/delete/<%= ContactList[count]._id%>" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash-alt"></i></a>
+                  </td>
+                <% } else { %>
+                  <td class="text-center col-4"><%= ContactList[count].name %></td>
+                  <td class="text-center col-4"><%= ContactList[count].phone %></td>
+                  <td class="text-center col-4"><%= ContactList[count].email %></td>
+                <% } %>  
+              </tr>
+        <% } %>
+      </tbody>  
+    </table>
+    <div class="title text-center my-5">
+      <h1>Contact Us</h1>
+  </div>
+    <form action="/submit" method="post" class="row g-3">
+        <div class="col-md-6">
+          <label for="inputFname" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="inputFname">
+        </div>
+        <div class="col-md-6">
+            <label for="inputLname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="inputLname">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <div class="col-12">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="phone" placeholder="Contact Number">
+        </div>
+        
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5"></textarea>
+        </div>
+        <div class="col-12">
+          <button id="submitbutton" type="submit" class="btn btn-dark">Submit</button>
+        </div>
+      </form>
+</section>
+
+
+
+    
+
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
