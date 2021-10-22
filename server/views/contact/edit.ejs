@@ -1,5 +1,76 @@
 <%- include ../partials/header.ejs %>
-<%- include ../partials/main_nav.ejs %>
+<section id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home">
+          <img class="logo" src="../../Assets/images/logo1.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <% if (title == "Home"){ %>
+                <a class="nav-link active" aria-current="page" href="/home"><i class="fas fa-lg fa-house-user"></i> Home </a>
+              <% } else  { %>
+                <a class="nav-link" aria-current="page" href="/home"><i class="fas fa-lg fa-house-user"></i> Home </a>
+              <% } %>
+              </li>
+    
+              <li class="nav-item">
+              <% if (title == "About"){ %>
+                <a class="nav-link active" href="/about"><i class="fas fa-lg fa-info-circle"></i> About Us </a>    
+              <% } else  { %>
+                <a class="nav-link" href="/about"><i class="fas fa-lg fa-info-circle"></i> About Us </a>
+              <% } %>
+              </li>
+    
+              <li class="nav-item">
+              <% if (title == "Projects"){ %>
+                <a class="nav-link active" href="/projects"><i class="fas fa-laptop"></i> Projects </a>
+              <% } else  { %>
+                  <a class="nav-link" href="/projects"><i class="fas fa-laptop"></i> Projects </a>
+              <% } %>
+              </li>
+    
+              <li class="nav-item">
+              <% if (title == "Services"){ %>
+                <a class="nav-link active" href="/services"><i class="fas fa-book"></i> Services </a>
+              <% } else  { %>
+                <a class="nav-link" href="/services"><i class="fas fa-book"></i> Services </a>     
+              <% } %>
+              </li>
+              
+       
+              <li class="nav-item">
+              <% if (title == "Contact"){ %>
+                <a class="nav-link active" href="/contact-list"><i class="fas fa-mobile-alt"></i> Contact </a>
+              <% } else  { %>
+                <a class="nav-link" href="/contact-list"><i class="fas fa-mobile-alt"></i> Contact</a>
+              <% } %>
+              </li>  
+
+              <% if(typeof displayName == 'string' && displayName) { %>
+   
+                <li class="nav-item"><a href="/logout" class="nav-link">
+                  <i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>  
+                <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>   
+              <% } else { %>
+                  <li class="nav-item"><a href="/login" class="nav-link">
+                    <i class="fas fa-lg fa-sign-in-alt"></i>Login</a></li>
+                <% } %>
+  
+
+           
+
+
+          </ul>       
+        </div>
+      </div>
+    </nav>
+  </section>
+  
 
 
 <div class="container">

@@ -44,7 +44,7 @@
     "@types/passport-local-mongoose": "^6.1.0"
   },
   "description": "demo app for COMP229",
-  "main": "index.js",
+
   "author": "Bohyun",
   "license": "ISC",
   "repository": {
